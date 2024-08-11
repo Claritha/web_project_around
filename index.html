@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Alrededor de los EE.UU." />
+    <meta name="author" content="Claribel Florez" />
+    <meta
+      name="keywords"
+      content="fotografia, red social, explorador, tripleten"
+    />
+    <title>Alrededor de los EE.UU</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/logo.svg"
+          alt="Logo Around the U.S."
+          class="header__logo"
+        />
+      </header>
+
+      <!--CONTENT-->
+      <main class="content">
+        <!--Profile-->
+        <section class="profile">
+          <img
+            src="./images/profile.jpg"
+            alt="Imagen de perfil."
+            class="profile__avatar"
+          />
+
+          <div class="profile__info">
+            <div class="profile__info-name">
+              <h1 class="profile__name">Jacques Cousteau</h1>
+              <img
+                src="./images/Edit-Button.png"
+                alt="boton para editar perfil"
+                class="profile__edit-button"
+              />
+            </div>
+            <h2 class="profile__info-aboutme">Explorador</h2>
+          </div>
+          <img
+            src="./images/Add-Button.png"
+            alt="boton para añadir contenido"
+            class="profile__add-button"
+          />
+        </section>
+
+        <!--Profile Edit Form-->
+        <section class="popup popup_profile">
+          <div class="popup__container">
+            <form class="popup__form form" autocomplete="off" novalidate>
+              <h4 class="form__name">Editar perfil</h4>
+              <fieldset class="form__input">
+                <input
+                  type="text"
+                  class="form__item form__item_name"
+                  id="name"
+                  name="name-input"
+                  placeholder="Nombre"
+                  required
+                  minlength="2"
+                  maxlength="40"
+                />
+                <span class="form__error name-input-error"></span>
+                <input
+                  type="text"
+                  class="form__item form__item_about-me"
+                  id="about-me"
+                  name="about-me-input"
+                  placeholder="Acerca de mi"
+                  required
+                  minlength="2"
+                  maxlength="200"
+                />
+                <span class="form__error about-me-input-error"></span>
+              </fieldset>
+              <button class="form__button form__button_submit" type="submit">
+                Guardar
+              </button>
+              <img
+                src="./images/Close-Icon.png"
+                alt="boton de cierre"
+                class="form__close-icon form__close-icon_profile"
+              />
+            </form>
+          </div>
+        </section>
+
+        <!--Elements-->
+        <section class="elements">
+          <div class="element">
+            <img
+              src="./images/Valle de Yosemite.jpg"
+              alt="Imagen 1"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Valle de Yosemite</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart2.png"
+                  alt="Like button"
+                  id="heart-off"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/Lago Louise.png"
+              alt="Descripción de la imagen 2"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Lago Louise</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart2.png"
+                  alt="Like button"
+                  id="heart-off-2"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/Montaña Calvas.png"
+              alt="Descripción de la imagen 3"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Montañas Calvas</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart2.png"
+                  alt="Like button"
+                  id="heart-off-3"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/Latemar.png"
+              alt="Descripción de la imagen 4"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Latemar</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart2.png"
+                  alt="Like button"
+                  id="heart-off-4"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/Vanois National.png"
+              alt="Descripción de la imagen 5"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Vanois National Park</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart2.png"
+                  alt="Like button"
+                  id="heart-off-5"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/Lago di Braies.png"
+              alt="Descripción de la imagen 6"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p>Lago di Braies</p>
+              <button class="element__button">
+                <img
+                  src="./images/heart2.png"
+                  alt="Like button"
+                  id="heart-off-6"
+                />
+              </button>
+            </div>
+          </div>
+        </section>
+        <!--Footer-->
+        <footer class="footer">
+          <p class="footer__copyright">© 2024 Claribel Florez</p>
+        </footer>
+      </main>
+    </div>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
