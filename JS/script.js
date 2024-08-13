@@ -1,42 +1,43 @@
+const editProfileFormElement = document.querySelector(".popup");
 const buttonEditElement = document.querySelector(".profile__edit-button");
+const buttonSaveFormElement = document.querySelector(".form__button_submit");
+const buttonCloseElement = document.querySelector(".form__close-icon");
+const inputNameElement = document.querySelector(".form__item_name");
+const inputAboutElement = document.querySelector(".form__item_about-me");
+let inputNameValue = "";
+let inputAboutValue = "";
 
 function showEditProfileForm() {
-  const editProfileFormElement = document.querySelector(".popup");
   editProfileFormElement.className += " popup_opened";
 }
 buttonEditElement.addEventListener("click", showEditProfileForm);
 
-const inputNameElement = document.querySelector(".form__item_name");
 inputNameElement.value = "Jacques Cousteau";
-const inputAboutElement = document.querySelector(".form__item_about-me");
 inputAboutElement.value = "Explorador";
-const buttonSaveFormElement = document.querySelector(".form__button_submit");
-let inputNameValue = "";
-let inputAboutValue = "";
 function handleEditProfileForm() {
-  inputNameValue = inputNameElement.value; //se guarda el valor
-  inputAboutValue = inputAboutElement.value;
-  if (inputNameValue.trim() && inputAboutValue.trim()) {
+  inputNameValue = inputNameElement.value.trim(); //se guarda el valor
+  inputAboutValue = inputAboutElement.value.trim(); //se guarda el valor
+  if (inputNameValue && inputAboutValue) {
     buttonSaveFormElement.removeAttribute("disabled");
   } else {
     buttonSaveFormElement.setAttribute("disabled", "true");
   }
 }
-
 inputNameElement.addEventListener("keyup", handleEditProfileForm);
 inputAboutElement.addEventListener("keyup", handleEditProfileForm);
 
-const buttonCloseElement = document.querySelector(".form__close-icon");
 function closeFormEditProfile() {
-  const closeFormEditProfileElement = document.querySelector(".popup");
-  closeFormEditProfileElement.classList.remove("popup_opened");
-  console.log(closeFormEditProfileElement);
+  editProfileFormElement.classList.remove("popup_opened");
 }
 buttonCloseElement.addEventListener("click", closeFormEditProfile);
-function saveEditProfile() {
+
+function saveEditProfile(event) {
   const nameElement = document.querySelector(".profile__name");
   const aboutElement = document.querySelector(".profile__info-aboutme");
   nameElement.innerHTML = inputNameValue;
   aboutElement.innerHTML = inputAboutValue;
+  editProfileFormElement.classList.remove("popup_opened");
+  buttonSaveFormElement.setAttribute("disabled", "true");
+  event.preventDefault();
 }
 buttonSaveFormElement.addEventListener("click", saveEditProfile);
