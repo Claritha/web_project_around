@@ -9,7 +9,6 @@
 .profile__avatar {
   width: 120px;
   height: 120px;
-  background-image: url(../images/profile.jpg);
   background-size: cover;
   border-radius: 50%;
 }
@@ -28,7 +27,7 @@
 .profile__name {
   font-family: "Inter-Regular";
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 42px;
   line-height: 48px;
   text-overflow: ellipsis;
@@ -51,7 +50,7 @@
 }
 .profile__edit-button:hover {
   cursor: pointer;
-  background: #ffffff99;
+  opacity: 0.6;
 }
 .profile__add-button {
   width: 150px;
@@ -60,9 +59,9 @@
 }
 .profile__add-button:hover {
   cursor: pointer;
-  background: #ffffff99;
+  opacity: 0.6;
 }
-@media screen and (min-width: 800px) and (max-width: 960px) {
+@media screen and (min-width: 880px) and (max-width: 960px) {
   .profile {
     width: 90%;
   }
@@ -71,11 +70,11 @@
     font-size: 40px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 799px) {
+@media screen and (min-width: 320px) and (max-width: 879px) {
   .profile {
     display: block;
     text-align: center;
-    width: 280px;
+    width: 282px;
   }
   .profile__info {
     margin: 0 auto 36px;
@@ -98,5 +97,8 @@
   .profile__info-aboutme {
     font-size: 14px;
     line-height: 17px;
+  }
+  .profile__add-button {
+    width: 100%;
   }
 }
